@@ -1,26 +1,23 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
-
-
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .wrapper
 {
     height: 100vh;
-    /* overflow-x: hidden; */
     overflow-y: auto;
 }
 .container
 {
     width: 70%;
     margin: 0 auto; 
-    /* background-color: aqua; */
 }
 
 .navbar
@@ -42,15 +39,12 @@
 
 .ltext
 {
-    /* margin-left: -1.2rem; */
     font-size:28px;
 }
 
 .nav-items div{
     font-size: 20px;
-    /* font-weight: 100; */
     cursor: pointer;
-    
 }
 
 a
@@ -64,9 +58,6 @@ a
 
     font-weight:600;
 }
-
-
-/* intro */
 
 .top-intro
 {
@@ -89,16 +80,14 @@ a
 
 .profile
 {
-    /* border: 2px solid black; */
+
     padding: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 17rem;
     animation: enlarge 2s linear 0s infinite alternate forwards;
-    /* border: 1px solid; */
-    
-    
+    user-select: none; 
 }
 
 @keyframes enlarge {
@@ -112,7 +101,6 @@ a
     to{
         transform: scale(1.1);
         filter: grayscale(0.5);
-       
         box-shadow:4px 4px 10px 0px #0000003f;
     }
     
@@ -132,6 +120,7 @@ a
     font-size:18px;
     font-weight: 500;
     border: 4px solid transparent;
+    cursor: pointer;
 }
 
 .hire-button::before
@@ -151,7 +140,6 @@ a
 
 .hire-button:hover::before
 {
-
     transform: scaleX(1);
 }
 
@@ -192,7 +180,6 @@ button:hover
     padding: 2rem 15rem;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items:center ;
     gap: 2rem;
     width: 100%;
@@ -213,15 +200,13 @@ button:hover
 }
 
 .card
-{
-    background-color: rebeccapurple;
+{   
     position: relative;
     padding: 4rem;
     padding-left: 5rem;
     width: 40rem;
     box-shadow:0px 0px 40px #1f1f1f;
-    border-radius: 20px;
-   
+    border-radius: 20px; 
 }
 
 .cleft
@@ -274,8 +259,6 @@ button:hover
     left: -1.1rem;
 }
 
-
-
 .card::before
 {
     content: "";
@@ -304,9 +287,6 @@ button:hover
 .card:hover .content{
     transform: scale(1.1);
 }
-
-
-
 
 .links
 {
@@ -410,7 +390,6 @@ i
     }
 }
 
-
 .tech-icons img:hover
 {
     transform: scale(1.2);
@@ -423,6 +402,117 @@ i
     top: -3rem;
     opacity: 0.2;
 }
+
+.contact-box
+{
+    padding: 3rem 15rem ;
+    background-color:rgb(231,231,231);
+}
+
+.contact-head
+{
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: rgb(240, 47, 47);
+}
+
+.contact-sub
+{
+    font-size: 2rem;
+    color: #343d68aa ;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.contact-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin:2rem;
+    margin-left: 8rem;
+}
+
+.contact-form input,textarea
+{
+    padding: 15px;
+    height: 1.2rem;
+    width: 80%;
+    font-size: 1rem;
+    box-shadow:2px 2px 10px #1f1f1f;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.contact-form textarea
+{
+    height: 10rem;
+    padding-top: 0.5rem;
+
+}
+
+.send-btn
+{
+    width: 12rem;
+    font-size: smaller;
+    margin-left: 8rem;
+}
+.submit-icon
+{
+    transform: scale(1.2);
+}
+
+.send-btn:hover 
+{
+    color: #1f1f1f;
+    transform: scale(0.8);
+}
+
+.send-btn:hover .submit-icon
+{
+    color: #1f1f1f;
+}
+
+footer
+{
+    display: flex;
+    background-color: #343d68;
+    padding: 4rem;
+}
+
+.foot-container
+{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin-left: 10rem;
+}
+
+.foot-left
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.foot-container a,.foot-container div i
+{
+    color: #fff;
+    transition: all 0.6s;
+}
+
+.foot-container div a:hover{
+    color: rgb(240, 47, 47);
+}
+
+.foot-container div i:hover{
+    color: rgb(240, 47, 47);
+}
+
+
 
 
 
