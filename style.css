@@ -1,0 +1,432 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.wrapper
+{
+    height: 100vh;
+    /* overflow-x: hidden; */
+    overflow-y: auto;
+}
+.container
+{
+    width: 70%;
+    margin: 0 auto; 
+    /* background-color: aqua; */
+}
+
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.nav-items
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 0 4rem;
+    gap: 2rem;
+}
+
+.ltext
+{
+    /* margin-left: -1.2rem; */
+    font-size:28px;
+}
+
+.nav-items div{
+    font-size: 20px;
+    /* font-weight: 100; */
+    cursor: pointer;
+    
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-items div a:hover
+{    
+
+    font-weight:600;
+}
+
+
+/* intro */
+
+.top-intro
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 5rem;
+    margin: 5rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.left
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem  ;
+}
+
+.profile
+{
+    /* border: 2px solid black; */
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17rem;
+    animation: enlarge 2s linear 0s infinite alternate forwards;
+    /* border: 1px solid; */
+    
+    
+}
+
+@keyframes enlarge {
+    from
+    {
+        transform: scale(1);
+        filter: grayscale(0);
+        box-shadow: 0px 0px 0px 0px #0000003f;
+        
+    }
+    to{
+        transform: scale(1.1);
+        filter: grayscale(0.5);
+       
+        box-shadow:4px 4px 10px 0px #0000003f;
+    }
+    
+}
+
+.hire-button
+{
+   background-color:tomato;
+   border: none;
+   width: 10rem;
+   height: 3rem;
+    color: #ffff;
+    position: relative;
+    z-index: 1;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    transition: all 1s;
+    font-size:18px;
+    font-weight: 500;
+    border: 4px solid transparent;
+}
+
+.hire-button::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: all 1s ;
+    z-index: -1;
+    transform-origin: left;
+}
+
+.hire-button:hover::before
+{
+
+    transform: scaleX(1);
+}
+
+button:hover
+{
+    color: black;
+    border: 4px solid tomato;
+}
+
+.head1
+{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.head2
+{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.top-desc
+{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.projects
+{
+    background-color:rgb(231,231,231);
+    padding: 2rem 15rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items:center ;
+    gap: 2rem;
+    width: 100%;
+}
+.head
+{
+    color: rgb(253, 59, 59);
+    font-size: 5rem;
+}
+
+.project-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.card
+{
+    background-color: rebeccapurple;
+    position: relative;
+    padding: 4rem;
+    padding-left: 5rem;
+    width: 40rem;
+    box-shadow:0px 0px 40px #1f1f1f;
+    border-radius: 20px;
+   
+}
+
+.cleft
+{
+    right: 10rem;
+}
+
+.cright
+{
+    left: 10rem;
+}
+.content
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    width: 50%;
+    color: white;
+    z-index: 10;
+    transition: all 1.2s;
+}
+
+.cright .content
+{
+  left:15rem ;
+}
+
+.name{
+    font-size: 2rem;
+}
+
+.number
+{
+   position: absolute;
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 900;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.cleft .number{
+    top: -1.8rem;
+    right: -1.1rem;
+}
+
+.cright .number{
+    top: -1.8rem;
+    left: -1.1rem;
+}
+
+
+
+.card::before
+{
+    content: "";
+   background: linear-gradient(45deg,#343d68,#343d68be,#343d687c);
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: all 0.7s;
+    transform-origin: left;  
+    border-radius: 20px;
+}
+
+.card:hover::before
+{
+    transform: scaleX(1);
+}
+
+.card:hover .number{
+    opacity: 1;
+}
+
+.card:hover .content{
+    transform: scale(1.1);
+}
+
+
+
+
+.links
+{
+    display:inline ;
+
+}
+i
+{
+    color: white;
+    transform: scale(1.8);
+    margin-left: 1rem;
+    
+}
+
+.c1
+{
+    background-image: url(CALCULATOR.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.c2
+{
+    background-image: url(dice.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.c3
+{
+    background-image: url(simon.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.tech-box
+{
+    width: 80%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0;
+    gap: 8rem;
+}
+
+.text
+{
+    width: 50%;
+}
+
+.tech-head
+{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgb(240, 47, 47);
+
+    
+}
+.text p{
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+
+    text-align: justify;
+}
+
+.first-letter
+{
+    font-size: 4rem;
+    font-weight: 900;
+}
+.tech-icons
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 50%;
+    position: relative;
+
+}
+.tech-icons img{
+    height: 5rem;
+    width: 5rem;
+    animation: up-down 5s linear 0s infinite alternate forwards;
+    position: relative;
+    
+}
+
+@keyframes up-down {
+    0%
+    {
+        transform: scale(1);
+    }
+    50%
+    {
+        transform: scale(1.1);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+
+.tech-icons img:hover
+{
+    transform: scale(1.2);
+}
+
+.blob
+{
+    position: absolute;
+    z-index: -1;
+    top: -3rem;
+    opacity: 0.2;
+}
+
+
+
+
+
+
+
